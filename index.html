@@ -19,7 +19,6 @@
   <div class="hero-content">
     <h1>Reliable Electrical & Security Services in Auckland</h1>
     <p>From residential to commercial, we've got all your electrical and home automation needs covered.</p>
-    <!--img src="images/placeholder-hero.jpg" alt="Electrician at work" class="hero-img"-->
   </div>
 
   <header class="header">
@@ -38,58 +37,61 @@
 
   <main>
     <section class="hero">
-      <div><img src="images/electrical/bulb-hero.jpg" alt="Anada Electrical Hero" class="hero-img"></div>
+      <div class="hero-img-wrapper">
+        <img src="images/electrical/bulb-hero.jpg" alt="Anada Electrical Hero" class="hero-img">
+      </div>
     </section>
 
     <section class="services-preview">
-      <h2>Our Services</h2>
+      <h2 class="animate-fade-in">Our Services</h2>
       <div class="services-grid limited-width">
 
-        <div class="service-card">
-          <img src="images/electrical/commercial-electrician.jpeg" class="service-card-image" alt="">
-          <div class="service-card-body">
+        <div class="service-card animate-fade-in">
+          <img src="images/electrical/commercial-electrician.jpeg" class="service-card-image animate-fade-in" alt="">
+          <div class="service-card-body animate-fade-in">
             <h3>Commercial Electrician</h3>
             <p>Top-tier commercial electrical installation, maintenance & energy-efficient solutions.</p>
           </div>
         </div>
 
-        <div class="service-card">
-          <img src="images/electrical/residential-electrician.jpg" class="service-card-image" alt="">
-          <div class="service-card-body">
+        <div class="service-card animate-fade-in">
+          <img src="images/electrical/residential-electrician.jpg" class="service-card-image animate-fade-in" alt="">
+          <div class="service-card-body animate-fade-in">
             <h3>Residential Electrician</h3>
             <p>Wiring, repairs, upgrades – keeping your home safe and efficient.</p>
           </div>
         </div>
 
-        <div class="service-card">
-          <img src="images/electrical/security-camera-1.jpg" class="service-card-image" alt="">
-          <div class="service-card-body">
+        <div class="service-card animate-fade-in">
+          <img src="images/electrical/security-camera-1.jpg" class="service-card-image animate-fade-in" alt="">
+          <div class="service-card-body animate-fade-in">
             <h3>Home Security</h3>
             <p>Alarm systems, CCTV, and smart access – peace of mind guaranteed.</p>
           </div>
         </div>
 
-        <div class="service-card" style="border: 1px solid #ccc;">
-          <div class="service-card-image-wrapper aspect-3-2">
+        <div class="service-card animate-fade-in" style="border: 1px solid #ccc;">
+          <div class="service-card-image-wrapper aspect-3-2 animate-fade-in">
             <img src="images/electrical/heatpump-animation.gif" class="service-card-image cropped" alt="">
           </div>
-          <div class="service-card-body">
+          <div class="service-card-body animate-fade-in">
             <h3>Heat Pumps</h3>
             <p>Efficient heating and cooling solutions tailored to your needs.</p>
           </div>
         </div>
 
-        <div class="service-card">
-          <img src="images/electrical/home-automation.jpeg" class="service-card-image" alt="">
-          <div class="service-card-body">
+        <div class="service-card animate-fade-in">
+          <img src="images/electrical/home-automation.jpeg" class="service-card-image animate-fade-in" alt="">
+          <div class="service-card-body animate-fade-in">
             <h3>Home Automation</h3>
             <p>Smart lighting, climate control, and more for a connected home.</p>
           </div>
         </div>
 
-        <div class="service-card">
-          <img src="images/electrical/tv-and-entertainment-unit-1.jpeg" class="service-card-image" alt="">
-          <div class="service-card-body">
+        <div class="service-card animate-fade-in">
+          <img src="images/electrical/tv-and-entertainment-unit-1.jpeg" class="service-card-image animate-fade-in"
+            alt="">
+          <div class="service-card-body animate-fade-in">
             <h3>TV & Entertainment</h3>
             <p>Professional setup of home theatres and AV systems.</p>
           </div>
@@ -100,10 +102,11 @@
     </section>
 
     <section class="cta-contact">
-      <h2>Get in Touch</h2>
-      <p>Contact Anada Electrical today for a free consultation.</p>
-      <a href="mailto:anadaelectrical@gmail.com?subject=Enquiry&body=Hi%20Anada%20Electrical," class="btn bg-red full-width-btn">Email Us</a>
-      <a href="tel:+64224610437" class="btn bg-red full-width-btn full-width-btn">Call Us</a>
+      <h2 class="animate-fade-in">Get in Touch</h2>
+      <p class="animate-fade-in">Contact Anada Electrical today for a free consultation.</p>
+      <a href="mailto:anadaelectrical@gmail.com?subject=Enquiry&body=Hi%20Anada%20Electrical,"
+        class="btn bg-red full-width-btn animate-fade-in">Email Us</a>
+      <a href="tel:+64224610437" class="btn bg-green full-width-btn full-width-btn animate-fade-in">Call Us</a>
     </section>
     <!--div class="btn-container">
         <a href="services.html" class="btn bg-red">Explore All Services</a>
@@ -128,6 +131,33 @@
     }
   </script>
 
+  <script>
+    /*document.querySelector('.btn-call-us').addEventListener('click', function () {
+      gtag('event', 'click', {
+        'event_category': 'engagement',
+        'event_label': 'Call Us Button',
+        'value': 1
+      });
+    });*/
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get all elements with the class that we want to animate
+      const animatedElements = document.querySelectorAll('.animate-fade-in');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated-show');
+          }
+        });
+      }, { threshold: 0.1 }); // Trigger animation when 10% of the element is visible
+
+      animatedElements.forEach((element) => {
+        observer.observe(element);
+      });
+    });
+
+  </script>
 
 </body>
 

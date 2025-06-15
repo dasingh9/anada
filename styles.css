@@ -14,7 +14,6 @@ body {
 
 /* Header */
 header {
-  /*background: linear-gradient(90deg, #6a0dad, #8a2be2);*/
   background: linear-gradient(90deg, black, #332222);
   color: white;
   padding: 1rem 2rem;
@@ -31,12 +30,13 @@ header {
 }
 
 .logo::before {
-    content:"⚡";
+  content: "⚡";
 }
 
 .nav-links {
   list-style: none;
-  display: none;/*flex;*/
+  display: none;
+  /*flex;*/
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
@@ -74,7 +74,7 @@ header {
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, #f3e5f5, #ede7f6);
+  /*background: linear-gradient(135deg, #f3e5f5, #ede7f6);*/
   /*padding: 3rem 2rem;*/
   text-align: center;
 }
@@ -109,15 +109,29 @@ header {
   margin-bottom: 2rem;
 }*/
 
-.hero-img {
+/*.hero-img {
   max-width: 100%;
   height: auto;
-  /*border-radius: 12px;*/
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}*/
+
+.hero-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 main {
-  background-color:#fefee9; /* #fcf9d9;*/
+  background-color: #fefee9;
+  /* #fcf9d9;*/
 }
 
 /* Services */
@@ -211,6 +225,11 @@ main {
   background-color: #e1251b;
 }
 
+.bg-green {
+  background-color: green;
+}
+
+
 .btn:hover {
   /*background: #8e44ec;*/
   background-color: #fce200;
@@ -286,9 +305,19 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+  header {
+    padding: 1rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
   header nav {
     display: none;
   }
+
   .nav-links {
     flex-direction: column;
     gap: 0.5rem;
@@ -298,10 +327,52 @@ footer {
     font-size: 2rem;
   }
 
+  /*.hero-img-wrapper {
+    overflow: hidden;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+  */
+
+  /*
+  .hero-img {
+    width: 140%;
+    object-fit: cover;
+    object-position: center;
+  }*/
+
+  /*.hero-img-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }&/
+
+  /* Default image styling (for large screens) */
+  /*.hero-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }*/
+
+  .hero-img-wrapper {
+    height: 75vh; /* 90% of phone screen height */
+    overflow: hidden;
+  }
+
+  .hero-img {
+    width: 140%;       /* Zoom out to crop 20% left and right */
+    height: 100%;       /* Fill wrapper vertically */
+    object-fit: cover;  /* Crop anything that doesn't fit */
+    object-position: center;
+  }
+
   /* Services */
   .services-preview {
     padding: 1rem;
-    background-color:#fefee9; /*#F4F8D3; #fcf9d9;*/
+    background-color: #fefee9;
+    /*#F4F8D3; #fcf9d9;*/
   }
 
   .services-grid {
@@ -314,4 +385,19 @@ footer {
     display: block;
     margin: 1rem auto;
   }
+}
+
+
+/* Animation fade-in items */
+.animate-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  /* Slightly move down */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Class to trigger the animation */
+.animated-show {
+  opacity: 1;
+  transform: translateY(0);
 }

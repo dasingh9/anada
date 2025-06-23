@@ -39,7 +39,7 @@ header {
 }
 
 .logo-icon {
-  height: 80px;
+  height: 64px;
   display: inline-block;
 }
 
@@ -48,7 +48,7 @@ header {
 }
 
 .logo-text-line2 {
-  font-size: .7rem;
+  font-size: .8rem;
   color: #fce200;
 }
 
@@ -76,7 +76,6 @@ header {
 
 .call-btn {
   margin-left: 1rem;
-  /*background: white;*/
   /*color: #6a0dad;*/
   background-color: #fce200;
   color: #e1251b;
@@ -248,6 +247,14 @@ main {
   background-color: green;
 }
 
+.bg-yellow {
+  background-color: #fce200;
+}
+
+.f-color-black {
+  color: #000;
+}
+
 
 .btn:hover {
   /*background: #8e44ec;*/
@@ -335,6 +342,10 @@ footer {
 
   .logo-icon {
     height: 56px;
+  }
+
+  .logo-text-line2 {
+    font-size: .8rem;
   }
 
   header nav {

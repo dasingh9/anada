@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Heat Pump Installation and Services in Auckland - Efficient Heating and Cooling Solutions">
+  <meta name="keywords" content="Heat Pumps Auckland, Heat Pump Installation, Air Conditioning, Climate Control">
+  <meta name="author" content="Anada Electrical and Securities Ltd">
+  <title>Heat Pump Services | Anada Electrical</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="images/logos/logo.svg" alt="Anada Electrical Logo" class="logo-icon">
+      <div>
+        <div class="logo-text-line1">ANADA</div>
+        <div class="logo-text-line2">ELECTRICAL & SECURITY</div>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-links center">
+        <li><a href="./">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact-us">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="call-btn" href="tel:+64224610437">📞 Call Us</a>
+  </header>
+
+  <main>
+    <section class="service-hero">
+      <div class="hero-img-wrapper">
+        <img src="images/services/heat-pump0.jpg" alt="Heat Pump Services" class="hero-img animate-fade-in">
+      </div>
+      <div class="service-hero-content animate-fade-in">
+        <h1>Heat Pump Services</h1>
+        <p>Efficient heating and cooling solutions for your home or business</p>
+      </div>
+    </section>
+
+    <section class="service-content limited-width">
+      <div class="service-flex animate-fade-in">
+        <div class="service-image">
+          <img src="images/services/heat-pump0.jpg" alt="Heat Pump" />
+        </div>
+        <div class="service-description">
+          <h2>Expert Heat Pump Solutions</h2>
+          <p>Anada Electrical specializes in providing energy-efficient heat pump solutions that keep your space comfortable all year round. Our expert team handles everything from consultation to installation and maintenance.</p>
+          <h3>Our Heat Pump Services Include:</h3>
+          <ul>
+            <li>Heat Pump Installation</li>
+            <li>System Design and Consultation</li>
+            <li>Energy Efficiency Assessment</li>
+            <li>Regular Maintenance</li>
+            <li>Repairs and Troubleshooting</li>
+            <li>Multi-Room Solutions</li>
+            <li>Commercial HVAC Systems</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-gallery animate-fade-in">
+      <h2>Our Heat Pump Projects</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="images/services/heat-pump1.jpg" alt="Heat Pump Project 1"></div>
+        <div class="gallery-item"><img src="images/services/heat-pump2.jpg" alt="Heat Pump Project 2"></div>
+        <div class="gallery-item"><img src="images/services/heat-pump3.jpg" alt="Heat Pump Project 3"></div>
+        <div class="gallery-item"><img src="images/services/heat-pump4.jpg" alt="Heat Pump Project 4"></div>
+        <div class="gallery-item"><img src="images/services/heat-pump5.jpg" alt="Heat Pump Project 5"></div>
+        <div class="gallery-item"><img src="images/services/heat-pump6.jpg" alt="Heat Pump Project 6"></div>
+      </div>
+    </section>
+
+    <section id="contact-us" class="cta-contact">
+      <h2 class="animate-fade-in">Get in Touch</h2>
+      <p class="animate-fade-in">Contact Anada Electrical today for a free consultation.</p>
+      <a href="tel:+64224610437" class="btn bg-red full-width-btn animate-fade-in" title="Call us at +64 22 461 0437">Call Us</a>
+      <a href="https://wa.me/64224610437?text=Hi%20Anada%20Electrical%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
+        class="btn bg-green full-width-btn animate-fade-in" title="Chat with us on WhatsApp: +64 22 461 0437">WhatsApp Us</a>
+      <a href="mailto:anadaelectrical@gmail.com?subject=Enquiry&body=Hi%20Anada%20Electrical," class="btn bg-yellow f-color-black full-width-btn animate-fade-in" title="Email us at anadaelectrical@gmail.com">Email Us</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content limited-width">
+      <div class="footer-section">
+        <img src="images/logos/logo.svg" alt="Anada Electrical Logo" class="footer-logo">
+        <p>Your trusted electrical partner in Auckland</p>
+      </div>
+      <div class="footer-section footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact-us">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>📞 022 461 0437</p>
+        <p>✉️ info@anada.co.nz</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Anada Electrical & Securities Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get all elements with the class that we want to animate
+      const animatedElements = document.querySelectorAll('.animate-fade-in');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated-show');
+          }
+        });
+      }, { threshold: 0.1 }); // Trigger animation when 10% of the element is visible
+
+      animatedElements.forEach((element) => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+
+</html>
